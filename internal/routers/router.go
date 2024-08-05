@@ -4,6 +4,7 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
+	c "github.com/hiumx/go-ecommerce-backend-api/internal/controllers"
 )
 
 func NewRouter() *gin.Engine {
@@ -12,7 +13,7 @@ func NewRouter() *gin.Engine {
 	v1 := r.Group("/api/v1")
 	{
 		v1.GET("/ping/:name", Pong)
-		v1.GET("/pong", Pong)
+		v1.GET("/users/:uid", c.NewUserController().GetUserById)
 	}
 
 	return r
