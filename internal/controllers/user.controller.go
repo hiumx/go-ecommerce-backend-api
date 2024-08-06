@@ -1,12 +1,11 @@
 package controllers
 
 import (
-	"fmt"
-	"net/http"
 	"strconv"
 
 	"github.com/gin-gonic/gin"
 	"github.com/hiumx/go-ecommerce-backend-api/internal/services"
+	"github.com/hiumx/go-ecommerce-backend-api/pkg/response"
 )
 
 type UserController struct {
@@ -22,9 +21,8 @@ func NewUserController() *UserController {
 func (uc *UserController) GetUserById(c *gin.Context) {
 	id, err := strconv.Atoi(c.Param("uid"))
 	if err != nil {
-		fmt.Println(err)
+		response.ErrorResponse(c, 20002)
+		return
 	}
-	c.JSON(http.StatusOK, gin.H{
-		"message": uc.userService.GetUserByIdService(id),
-	})
+	response.SuccessResponse(c, 20001, uc.userService.GetUserByIdService(id))
 }
