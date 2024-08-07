@@ -1,0 +1,22 @@
+server:
+  port: 8008
+databases:
+  - user: admin
+    password: admin
+    host: localhost
+    dbName: users
+  - user: admin
+    password: admin
+    host: localhost
+    dbName: orders
+security:
+  jwt: 
+    key: abcd1234
+redis: 
+  user: admin
+elasticsearch:
+  user: admin
+rabbitMQ:
+  user: admin
+kafka:
+  user: admin
