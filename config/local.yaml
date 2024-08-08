@@ -1,22 +1,12 @@
 server:
   port: 8008
-databases:
-  - user: admin
-    password: admin
-    host: localhost
-    dbName: users
-  - user: admin
-    password: admin
-    host: localhost
-    dbName: orders
-security:
-  jwt: 
-    key: abcd1234
-redis: 
-  user: admin
-elasticsearch:
-  user: admin
-rabbitMQ:
-  user: admin
-kafka:
-  user: admin
+mysql: 
+  host: 127.0.0.1
+  port: 3306
+  username: root
+  password: root1234
+  dbName: mysql_go
+  maxIdleConns: 10
+  maxOpenConns: 100
+  connMaxLifetime: 3600
+
