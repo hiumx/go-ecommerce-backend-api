@@ -1,0 +1,4 @@
+{"level":"INFO","time":"2024-08-09T10:32:21.928+0700","caller":"initialize/run.go:17","msg":"Log success!"}
+{"level":"INFO","time":"2024-08-09T10:34:36.004+0700","caller":"initialize/run.go:16","msg":"Log success!"}
+{"level":"INFO","time":"2024-08-09T10:35:07.966+0700","caller":"initialize/run.go:16","msg":"Log success!"}
+{"level":"INFO","time":"2024-08-09T10:48:05.481+0700","caller":"initialize/run.go:16","msg":"Log success!"}

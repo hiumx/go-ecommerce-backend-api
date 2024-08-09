@@ -33,7 +33,6 @@ func main() {
 	core := zapcore.NewCore(encoder, sync, zapcore.InfoLevel)
 
 	logger := zap.New(core, zap.AddCaller())
-
 	logger.Info("This is an info message")
 	logger.Error("This is an error message")
 

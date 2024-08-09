@@ -12,9 +12,11 @@ func Run() {
 	fmt.Println("Load config from initialize", mySqlConfig.Host, mySqlConfig.Port)
 
 	InitLogger()
+
+	global.Logger.Info("Log success!")
+
 	InitMySQL()
 	InitRedis()
-
 	r := InitRouter()
 
 	r.Run(":8008")
