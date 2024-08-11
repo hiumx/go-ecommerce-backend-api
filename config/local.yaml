@@ -2,10 +2,10 @@ server:
   port: 8008
 mysql: 
   host: 127.0.0.1
-  port: 3306
+  port: 33306
   username: root
   password: root1234
-  dbName: mysql_go
+  dbName: mysql_sd_go
   maxIdleConns: 10
   maxOpenConns: 100
   connMaxLifetime: 3600

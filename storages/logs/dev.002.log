@@ -1,2 +1,4 @@
 {"level":"INFO","time":"2024-08-09T10:48:57.302+0700","caller":"initialize/run.go:16","msg":"Log success!"}
 {"level":"INFO","time":"2024-08-09T10:50:24.498+0700","caller":"initialize/run.go:16","msg":"Log success!"}
+{"level":"INFO","time":"2024-08-11T09:58:38.573+0700","caller":"initialize/run.go:16","msg":"Log success!"}
+{"level":"INFO","time":"2024-08-11T09:58:38.608+0700","caller":"initialize/mysql.go:29","msg":"Initialize MySQL successfully"}
