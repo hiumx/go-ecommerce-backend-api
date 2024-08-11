@@ -2,3 +2,9 @@
 {"level":"INFO","time":"2024-08-09T10:50:24.498+0700","caller":"initialize/run.go:16","msg":"Log success!"}
 {"level":"INFO","time":"2024-08-11T09:58:38.573+0700","caller":"initialize/run.go:16","msg":"Log success!"}
 {"level":"INFO","time":"2024-08-11T09:58:38.608+0700","caller":"initialize/mysql.go:29","msg":"Initialize MySQL successfully"}
+{"level":"INFO","time":"2024-08-11T10:40:05.790+0700","caller":"initialize/run.go:15","msg":"Log success!"}
+{"level":"INFO","time":"2024-08-11T10:40:05.826+0700","caller":"initialize/mysql.go:29","msg":"Initialize MySQL successfully"}
+{"level":"INFO","time":"2024-08-11T10:40:06.171+0700","caller":"initialize/redis.go:29","msg":"Initialize Redis successfully!"}
+{"level":"INFO","time":"2024-08-11T10:45:53.631+0700","caller":"initialize/run.go:15","msg":"Log success!"}
+{"level":"INFO","time":"2024-08-11T10:45:53.651+0700","caller":"initialize/mysql.go:29","msg":"Initialize MySQL successfully"}
+{"level":"INFO","time":"2024-08-11T10:45:53.999+0700","caller":"initialize/redis.go:29","msg":"Initialize Redis successfully!"}
