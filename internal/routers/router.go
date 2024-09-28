@@ -4,7 +4,6 @@ import (
 	"fmt"
 
 	"github.com/gin-gonic/gin"
-	c "github.com/hiumx/go-ecommerce-backend-api/internal/controllers"
 	"github.com/hiumx/go-ecommerce-backend-api/internal/middlewares"
 )
 
@@ -36,10 +35,10 @@ func NewRouter() *gin.Engine {
 	//middleware
 	r.Use(middlewares.AuthMiddleware(), AA(), BB(), CC)
 
-	v1 := r.Group("/api/v1")
-	{
-		v1.GET("/users/:uid", c.NewUserController().GetUserById)
-	}
+	// v1 := r.Group("/api/v1")
+	// {
+	// 	v1.GET("/users/:uid", c.NewUserController().Register)
+	// }
 
 	return r
 }
