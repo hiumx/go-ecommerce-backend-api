@@ -1,28 +1,23 @@
 package controllers
 
 import (
-	"strconv"
-
 	"github.com/gin-gonic/gin"
 	"github.com/hiumx/go-ecommerce-backend-api/internal/services"
 	"github.com/hiumx/go-ecommerce-backend-api/pkg/response"
 )
 
 type UserController struct {
-	userService *services.UserService
+	userService services.IUserService
 }
 
-func NewUserController() *UserController {
+func NewUserController(
+	userService services.IUserService,
+) *UserController {
 	return &UserController{
-		userService: services.NewUserService(),
+		userService: userService,
 	}
 }
 
-func (uc *UserController) GetUserById(c *gin.Context) {
-	id, err := strconv.Atoi(c.Param("uid"))
-	if err != nil {
-		response.ErrorResponse(c, 20002)
-		return
-	}
-	response.SuccessResponse(c, 20001, uc.userService.GetUserByIdService(id))
+func (uc *UserController) Register(c *gin.Context) {
+	response.SuccessResponse(c, 20001, uc.userService.Register("abc@gmail.com", "register"))
 }

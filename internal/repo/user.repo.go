@@ -1,14 +1,16 @@
 package repo
 
-import "fmt"
-
-type UserRepo struct{}
-
-func NewUserRepo() *UserRepo {
-	return &UserRepo{}
+type IUserRepository interface {
+	GetUserByEmail(email string) bool
 }
 
-func (ur *UserRepo) GetUserByIdRepo(id int) string {
-	fmt.Println(id)
-	return "HiuMX"
+type userRepository struct{}
+
+// GetUserByEmail implements IUserRepository.
+func (u *userRepository) GetUserByEmail(email string) bool {
+	return true
+}
+
+func NewUserRepository() IUserRepository {
+	return &userRepository{}
 }

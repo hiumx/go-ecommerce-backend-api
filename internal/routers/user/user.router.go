@@ -1,12 +1,22 @@
 package user
 
-import "github.com/gin-gonic/gin"
+import (
+	"github.com/gin-gonic/gin"
+	"github.com/hiumx/go-ecommerce-backend-api/internal/controllers"
+	"github.com/hiumx/go-ecommerce-backend-api/internal/repo"
+	"github.com/hiumx/go-ecommerce-backend-api/internal/services"
+)
 
 type UserRouter struct{}
 
 func (ur *UserRouter) InitUserRouter(Router *gin.RouterGroup) {
 
-	userPublicRouter := Router.Group("/user")
+	// No dependency injection
+	userRepo := repo.NewUserRepository()
+	userService := services.NewUserService(userRepo)
+	userController := controllers.NewUserController(userService)
+
+	userPublicRouter := Router.Group("/user", userController.Register)
 	{
 		userPublicRouter.POST("/register")
 		userPublicRouter.POST("/otp")
