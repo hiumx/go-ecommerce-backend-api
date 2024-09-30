@@ -2,8 +2,8 @@ server:
   port: 8008
   mode: "dev"
 mysql: 
-  host: 127.0.0.1
-  port: 33306
+  host: mysql_container #127.0.0.1
+  port: 3306 #33306
   username: root
   password: root1234
   dbName: mysql_sd_go
@@ -18,8 +18,8 @@ logger:
   maxAge: 28
   compress: true
 redis:
-  host: 127.0.0.1
-  port: 6381
+  host: redis_container #127.0.0.1
+  port: 6379 #6381
   password: 
   db: 0
   poolSize: 10
